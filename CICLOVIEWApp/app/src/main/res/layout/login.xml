@@ -8,7 +8,13 @@
     <TextView
         android:id="@+id/firstText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#12D90A"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:layout_margin="30dp"/>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -38,12 +44,18 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"></FrameLayout>
-
-    <Button
-        android:id="@+id/buttom"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:stateListAnimator="@null"/>
+
+
+    </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -3,6 +3,8 @@ package br.com.byteabyte.cicloviewapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.login.*
 
@@ -16,6 +18,7 @@ class MainActivity : DebugActivity() {
         firstText.setText(R.string.mensagem_inicial)
 
         buttom.setOnClickListener{
+
             var usuario = campoUsuario.text.toString()
             var senha = campoSenha.text.toString()
 
