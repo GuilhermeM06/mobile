@@ -2,16 +2,17 @@ package br.com.byteabyte.cicloviewapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 
-class IndexActivity : DebugActivity() {
+class TelaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_index)
+        setContentView(R.layout.activity_tela)
 
         val args = intent.extras
         val nome = args?.getString("nome")
 
-        Toast.makeText(this, "Bem-vindo, $nome", Toast.LENGTH_LONG).show()
+        supportActionBar?.title = "$nome"
     }
+
+
 }
