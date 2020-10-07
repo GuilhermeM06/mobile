@@ -5,22 +5,29 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.SystemClock
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.GravityCompat
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_index.*
 import kotlinx.android.synthetic.main.login.*
+import kotlinx.android.synthetic.main.nav_view.*
 import kotlinx.android.synthetic.main.toolbar.*
 import java.util.*
 import kotlin.concurrent.schedule
 
-class IndexActivity : DebugActivity() {
+class IndexActivity : DebugActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_index)
 
+        this.drawerLayout = layoutMenuLateral
+        this.navView = menu_lateral
         val args = intent.extras
         val nome = args?.getString("nome")
 
@@ -30,13 +37,19 @@ class IndexActivity : DebugActivity() {
 
         supportActionBar?.title = "Cadastro de Bicicletas"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        configuraMenuLateral()
     }
+
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
 
         return super .onCreateOptionsMenu(menu)
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
@@ -56,43 +69,22 @@ class IndexActivity : DebugActivity() {
             var intent = Intent(this, Tela_cadastro::class.java)
             startActivity(intent)
 
-        } else if (id == R.id.action_configurations) {
-            Toast.makeText(this, "Botão Configurações", Toast.LENGTH_LONG).show()
-            var intent = Intent(this, ConfiguracoesActivity::class.java)
-            startActivity(intent)
-
         } else if (id == android.R.id.home){
             finish()
-        } else if (id == R.id.pecas) {
-            var intent = Intent(this, TelaActivity::class.java)
-            var nome = "Peças"
-
-            intent.putExtra("nome", nome)
-            startActivity(intent)
-
-        } else if (id == R.id.servico) {
-            var intent = Intent(this, TelaActivity::class.java)
-            var nome = "Serviços"
-
-            intent.putExtra("nome", nome)
-            startActivity(intent)
-
-        } else if (id == R.id.contato) {
-            var intent = Intent(this, TelaActivity::class.java)
-            var nome = "Contato"
-
-            intent.putExtra("nome", nome)
-            startActivity(intent)
-
         }
-
 
 
         return super.onOptionsItemSelected(item)
     }
 
 
+
+
+
 }
+
+
+
 
 
 

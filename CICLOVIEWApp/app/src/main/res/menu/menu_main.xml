@@ -2,29 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/pecas"
-        android:title="@string/pecas"
-        app:showAsAction="always"
-        />
-
-    <item
-        android:id="@+id/servico"
-        android:title="@string/servico"
-        app:showAsAction="always"
-        />
-
-    <item
-        android:id="@+id/contato"
-        android:title="@string/contato"
-        app:showAsAction="always"
-        />
-
 
     <item
         android:id="@+id/action_search"
         android:title="@string/action_search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:icon="@android:drawable/ic_menu_search"
         />
 
@@ -33,7 +15,7 @@
     android:id="@+id/action_update"
     android:icon="@android:drawable/ic_menu_more"
     android:title="@string/action_update"
-    app:showAsAction="ifRoom"
+    app:showAsAction="always"
 
     />
 
@@ -41,14 +23,7 @@
         android:id="@+id/action_add"
         android:icon="@android:drawable/ic_menu_add"
         android:title="@string/action_add"
-        app:showAsAction="ifRoom"
-
-        />
-
-    <item
-        android:id="@+id/action_configurations"
-        android:title="@string/action_configurations"
-        app:showAsAction="never"
+        app:showAsAction="always"
 
         />
 
