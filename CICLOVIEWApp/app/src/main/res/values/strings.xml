@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CICLOVIEWApp</string>
+    <string name="mensagem_inicial">Bem-vindo ao CicloviewApp!</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_update">Atualizar</string>
+    <string name="action_add">Adicionar</string>
+    <string name="action_configurations">Configurações</string>
+    <string name="pecas">Peças</string>
+    <string name="servico">Serviços</string>
+    <string name="contato">Contato</string>
+    <string name="exit">Sair</string>
+    <string name="inicial">Inicio</string>
+    <string name="navigation_drawer_open">Aberta</string>
+    <string name="navigation_drawer_close">Fechada</string>
+</resources>

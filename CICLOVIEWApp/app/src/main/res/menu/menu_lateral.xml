@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/inicial"
+            android:title="@string/inicial"
+            android:iconTint="#72D175"
+            android:checked="true"
+
+            />
+
+        <item
+            android:id="@+id/pecas"
+            android:title="@string/pecas"
+            />
+
+        <item
+            android:id="@+id/servico"
+            android:title="@string/servico"
+            />
+
+        <item
+            android:id="@+id/contato"
+            android:title="@string/contato"
+            />
+
+        <item
+            android:id="@+id/action_configurations"
+            android:title="@string/action_configurations"
+            />
+
+        <item
+            android:id="@+id/exit"
+            android:title="@string/exit"
+            />
+
+    </group>
+
+</menu>
